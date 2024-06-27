@@ -1,13 +1,35 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  @apply bg-cover bg-center;
+  background-image: url("/public/BGImg.png");
+}
+.myName{
+    @apply text-yellow-700 font-bold text-5xl font-mono hover:font-serif;
+}
+.menuHover{
+    @apply hover:text-skin-tone;
+}
+.icons{
+  @apply self-center;
+}
+.icons-size{
+  @apply size-5;
+}
+.exp-role{
+  @apply text-ruby font-bold text-center
+}
+.exp-details{
+@apply text-skin-tone1 text-lg text-center
+}
+.edu{
+  @apply text-skin-tone1
+}
+.edu-details{
+  @apply text-skin-tone
+}
+.active{
+  @apply bg-ruby
 }
