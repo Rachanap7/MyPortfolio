@@ -27,7 +27,7 @@ export default function App() {
       >
         <div className="flex flex-col">
           <span className="text-2xl text-regal-blue-4">Hello, I am</span>
-          <span className="myName">Rachana Parkar</span>
+          <span className="myName">Rachana Ramakant Parkar</span>
           <div className="flex gap-4">
             <span className="skills-icon cursor-pointer skills-icon-hover"><FaReact/></span>
             <span className="skills-icon cursor-pointer skills-icon-hover"><SiRedux/></span>
