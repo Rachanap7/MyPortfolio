@@ -4,9 +4,9 @@ import {
   faLinkedin,
   faInstagram,
 } from "@fortawesome/free-brands-svg-icons";
-import {
-  faN
-} from "@fortawesome/free-solid-svg-icons";
+// import {
+//   faN
+// } from "@fortawesome/free-solid-svg-icons";
 const Footer = () => {
   return (
     <div className="max-w-full text-white text-center bg-regal-blue-2 flex flex-col gap-8 min-h-60 items-center">
