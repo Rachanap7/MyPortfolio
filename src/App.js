@@ -14,35 +14,38 @@ import {
   faRectangleList,
   faHouse,
 } from "@fortawesome/free-solid-svg-icons";
+import { SiJavascript,SiRedux } from "react-icons/si";
+import { FaReact } from "react-icons/fa";
 
 export default function App() {
-  const[activeTab,setActiveTab]=useState('#');
+  const [activeTab, setActiveTab] = useState("#");
   return (
     <main>
-      <div className="m-8 ml-40 flex justify-start gap-8 items-center h-full" id="home">
-        {/* <div className="w-full max-w-32 h-1/2">
-          <img
-            src={"/NavPhoto1.jpg"}
-            alt="NavPhoto1"
-            className="rounded-3xl h-auto max-w-full mx-auto block"
-          ></img>
-        </div> */}
+      <div
+        className="m-8 ml-20 flex justify-start gap-8 items-center h-full"
+        id="home"
+      >
         <div className="flex flex-col">
-          <span className="text-2xl text-skin-tone1">Hello, I am</span>
+          <span className="text-2xl text-regal-blue-4">Hello, I am</span>
           <span className="myName">Rachana Parkar</span>
+          <div className="flex gap-4">
+            <span className="skills-icon cursor-pointer skills-icon-hover"><FaReact/></span>
+            <span className="skills-icon cursor-pointer skills-icon-hover"><SiRedux/></span>
+            <span className="skills-icon cursor-pointer skills-icon-hover"><SiJavascript/></span>
+          </div>
         </div>
         <div className="ml-auto">
-          <ul className="text-ruby text-xl font-bold divide-x flex hover:divide-pink-400 border-style: double">
-            <li className="menuHover p2 text-center flex-auto w-64">
-              <button className="rounded-lg hover:bg-white hover:text-black hover:p-2">
+          <ul className="text-white font-medium flex gap-2">
+            <li className="p-2 rounded text-center flex-auto navBtn skills-icon-hover">
+              <a  href="#contact" className="">
                 Contact Me
-              </button>
+              </a>
             </li>
-            <li className="menuHover p2 text-center flex-auto w-64">
+            <li className="p-2 rounded text-center flex-auto navBtn skills-icon-hover">
               <a
                 href="/Rachana-Parkar_Resume.pdf"
                 target="_blank"
-                className="rounded-lg hover:bg-white hover:text-black hover:p-2"
+                className=""
               >
                 Download CV
               </a>
@@ -57,22 +60,44 @@ export default function App() {
       <MyProjects />
       <ContactMe />
       <Footer />
-      <div className="rounded-full w-1/4 h-16 backdrop-blur-sm bg-grey-bg fixed left-[37.5%] bottom-8 flex justify-evenly pt-1">
-      <a href="#home" onClick={() => setActiveTab('#')} className={activeTab === '#' ? 'active icons-size self-center ': 'icons-size self-center'}>
-          <FontAwesomeIcon icon={faHouse} className="icons-size" />
-        </a>
-        <a href="#experience" onClick={() => setActiveTab('#experience')} className={activeTab === '#experience' ? 'active icons-size self-center ': 'icons-size self-center'}>
-          <FontAwesomeIcon icon={faAddressBook} className="icons-size" />
-        </a>
-        <a href="#contact" onClick={() => setActiveTab('#contact')} className={activeTab === '#contact' ? 'active icons-size self-center ': 'icons-size self-center'}>
-          <FontAwesomeIcon icon={faUser} className="icons-size" />
-        </a>
-        <a href="#skills" onClick={() => setActiveTab('#skills')} className={activeTab === '#skills' ? 'active icons-size self-center ': 'icons-size self-center'}>
-          <FontAwesomeIcon icon={faListUl} className="icons-size" />
-        </a>
-        <a href="#projects" onClick={() => setActiveTab('#projects')} className={activeTab === '#projects' ? 'active icons-size self-center ': 'icons-size self-center'}>
-          <FontAwesomeIcon icon={faRectangleList} className="icons-size" />
-        </a>
+      <div className=" fixed bottom-8 flex justify-center w-full">
+       <div className="rounded-full backdrop-blur-sm bg-regal-blue-4 flex justify-center gap-3 pl-3 p-1 pr-3">
+       <div
+          className={`self-center ${activeTab === "#" ? "active text-white" : "text-black"}`}
+        >
+          <a href="#home" onClick={() => setActiveTab("#")}>
+            <FontAwesomeIcon icon={faHouse} className="icons-size2" />
+          </a>
+        </div>
+        <div
+          className={`self-center ${activeTab === "#experience" ? "active text-white" : "text-black"}`}
+        >
+          <a href="#experience" onClick={() => setActiveTab("#experience")}>
+            <FontAwesomeIcon icon={faAddressBook} className="icons-size2" />
+          </a>
+        </div>
+        <div
+          className={`self-center ${activeTab === "#contact" ? "active text-white" : "text-black"}`}
+        >
+          <a href="#contact" onClick={() => setActiveTab("#contact")}>
+            <FontAwesomeIcon icon={faUser} className="icons-size2" />
+          </a>
+        </div>
+        <div
+          className={`self-center ${activeTab === "#skills" ? "active text-white" : "text-black"}`}
+        >
+          <a href="#skills" onClick={() => setActiveTab("#skills")}>
+            <FontAwesomeIcon icon={faListUl} className="icons-size2" />
+          </a>
+        </div>
+        <div
+          className={`self-center ${activeTab === "#projects" ? "active text-white" : "text-black"}`}
+        >
+          <a href="#projects" onClick={() => setActiveTab("#projects")}>
+            <FontAwesomeIcon icon={faRectangleList} className="icons-size2" />
+          </a>
+        </div>
+       </div>
       </div>
     </main>
   );

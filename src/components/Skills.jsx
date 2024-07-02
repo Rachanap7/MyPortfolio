@@ -1,45 +1,72 @@
+import { SiJavascript,SiRedux,SiTypescript } from "react-icons/si";
+import { FaReact,FaHtml5,FaCss3Alt,FaJava } from "react-icons/fa";
+import { DiJqueryLogo } from "react-icons/di";
+import { RiTailwindCssFill } from "react-icons/ri";
+import { BsFiletypeSql } from "react-icons/bs";
 const Skills = () => {
   const mySkills = [
-    "React JS",
-    "Redux",
-    "TypeScript",
-    "JavaScript",
-    "JQuery",
-    "HTML, CSS",
-    "Tailwind CSS",
-    "SQL",
-    "Java",
+    {
+      name:"React JS",
+      icon:<FaReact/>,
+    },
+    {
+      name:"Redux",
+      icon:<SiRedux/>,
+    },
+    {
+      name:"TypeScript",
+      icon:<SiTypescript/>,
+    },
+    {
+      name:"JavaScript",
+      icon:<SiJavascript/>,
+    },
+    {
+      name:"JQuery",
+      icon:<DiJqueryLogo/>,
+    },
+    {
+      name:"HTML",
+      icon:<FaHtml5/>,
+    },
+    {
+      name:"CSS",
+      icon:<FaCss3Alt/>,
+    },
+    {
+      name:"Tailwind CSS",
+      icon:<RiTailwindCssFill/>,
+    },
+    {
+      name:"SQL",
+      icon:<BsFiletypeSql/>,
+    },
+    {
+      name:"Java",
+      icon:<FaJava/>,
+    }
   ];
   return (
-    <div className="max-w-full m-8 ml-40 text-2xl font-sans text-gray-500 " id="skills">
-      <div className="flex justify-evenly">
-        <div className="text-left font-semibold text-slate-300 mb-4 text-3xl w-1/4 self-center">
-          This is what I use to develop some random stuff..
+    <div className="max-w-full m-8 ml-20 text-2xl font-sans text-white" id="skills">
+      <div className="text-center">
+        <div className="font-semibold mb-4 text-3xl">
+          Skills
         </div>
-        <div className=" w-1/8 p-10">
-          <ol className="font-bold text-ruby list-disc">
-            {mySkills.slice(0, 5).map((skill, key) => {
-              return (
-                <li key={key} className="mb-2 hover:scale-110 transform transition duration-300">
-                  {skill}
-                </li>
-              );
-            })}
-          </ol>
-        </div>
-        {mySkills.length > 4 && (
-          <div className=" w-1/8 p-10">
-            <ol className="font-bold text-ruby list-disc">
-              {mySkills.slice(5).map((skill, key) => {
-                return (
-                  <li key={key} className="mb-2 hover:scale-110 transform transition duration-300">
-                    {skill}
-                  </li>
-                );
-              })}
-            </ol>
+        {
+          <div className="grid gap-6 grid-cols-4 grid-rows-3">{
+
+            mySkills.map((skills,key)=>{
+              return(
+              <div key={key} className="font-bold grid justify-items-center">
+                <span className="skills-icon cursor-pointer skills-icon-hover">{skills.icon}</span>
+                {skills.name}
+              </div>
+              
+              )
+            })
+            }
           </div>
-        )}
+        }
       </div>
     </div>
   );

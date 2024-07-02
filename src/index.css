@@ -3,11 +3,10 @@
 @tailwind utilities;
 
 body {
-  @apply bg-cover bg-center;
-  background-image: url("/public/BGImg.png");
+  @apply bg-gradient-to-r from-regal-blue-1 from-60% to-regal-blue;
 }
 .myName{
-    @apply text-yellow-700 font-bold text-5xl font-mono hover:font-serif;
+    @apply text-white text-5xl font-mono mb-4;
 }
 .menuHover{
     @apply hover:text-skin-tone;
@@ -16,20 +15,52 @@ body {
   @apply self-center;
 }
 .icons-size{
-  @apply size-5;
+  @apply size-6;
+}
+.icons-size1{
+  @apply size-9;
+}
+.icons-size2{
+  @apply size-4;
 }
 .exp-role{
-  @apply text-ruby font-bold text-center
+  @apply text-white font-bold text-center
 }
 .exp-details{
-@apply text-skin-tone1 text-lg text-center
+@apply text-white text-lg text-center
 }
 .edu{
-  @apply text-skin-tone1
+  @apply text-white
 }
 .edu-details{
-  @apply text-skin-tone
+  @apply text-white
 }
 .active{
-  @apply bg-ruby
+  @apply bg-orange1 rounded-full py-1.5 px-2
+}
+.skills-icon{
+  @apply p-2 text-xl rounded-full text-white border-2 border-solid border-white
+  /* padding: 0.5rem;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: white;
+  border: 2px solid white; */
+}
+.brand-icon{
+  @apply text-xl rounded-lg text-white border-2 border-solid border-white
+}
+.skills-icon-hover{
+  @apply hover:scale-110 hover:bg-rgba-white-0.3 transition-all duration-500 ease-in
+ /* transform: scale(1.1);
+ transition: all 1s ease;
+ background-color: rgba(255, 255, 255, 0.3); */
+}
+.email-icon-hover{
+  @apply hover:scale-110 transition-all duration-500 ease-in
+}
+.skills-icon-hover1{
+  @apply hover:scale-95 hover:bg-rgba-white-0.3 transition-all duration-500 ease-in
+}
+.navBtn{
+  @apply text-xl text-white border-2 border-solid border-white
 }

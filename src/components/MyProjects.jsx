@@ -38,17 +38,16 @@ const MyProjects = () => {
     },
   ];
   return (
-    <div className="max-w-full m-8 ml-40 font-sans text-gray-500" id="projects">
-      <div className="text-center font-semibold text-slate-300 mb-4 text-3xl">
-        Projects & some Random Stuff
+    <div className="max-w-full m-8 ml-20 font-sans text-gray-500" id="projects">
+      <div className="text-center font-semibold text-white mb-6 text-3xl">
+        Projects
       </div>
-      <div className="flex flex-wrap items-center gap-x-36">
+      <div className="flex flex-wrap items-center gap-x-36 justify-center">
         {projectList.map((project, key) => {
           return (
-            <div className="backdrop-blur-sm bg-grey-bg w-80 rounded-3xl mb-4 hover:border hover:bg-transparent hover:scale-105 transform transition duration-300">
+            <div className="border-2 border-solid border-white w-80 rounded-3xl mb-8 shadow-custom cursor-pointer skills-icon-hover" onClick={()=>window.open(project.githubLink,"_blank")} key={key}>
               <div
-                key={key}
-                className="flex flex-col text-left p-4 gap-y-2 text-skin-tone1"
+                className="flex flex-col text-left p-4 gap-y-2 text-white"
               >
                 <img
                   src={project.preview}
@@ -62,7 +61,7 @@ const MyProjects = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
-                  <button className="bg-ruby p-2 rounded-lg hover:bg-white hover:text-black">GitHub</button>
+                  <button className="bg-regal-blue p-2 rounded-lg hover:bg-white hover:text-black">GitHub</button>
                 </a>
               </div>
             </div>
