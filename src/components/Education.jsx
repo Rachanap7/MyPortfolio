@@ -44,7 +44,7 @@ const Education = () => {
               <div>{entry.YOP}</div>
             </div>
             {!isLeft && (
-              <div className="flex flex-col items-center absolute md:right-[13.7rem] right-[10.5rem] transform -translate-x-1/2">
+              <div className="flex flex-col items-center absolute md:right-[13.7rem] sm:right-[10.5rem] right-[9.8rem] transform -translate-x-1/2">
                 <div className="bg-white rounded-full h-4 w-4 border-2 border-gray-200"></div>
                 <div className="border-l-2 border-gray-200 flex-1"></div>
               </div>
