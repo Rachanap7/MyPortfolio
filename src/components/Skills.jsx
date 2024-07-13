@@ -47,13 +47,13 @@ const Skills = () => {
     }
   ];
   return (
-    <div className="max-w-full m-8 ml-20 text-2xl font-sans text-white" id="skills">
+    <div className="max-w-full m-8 md:ml-20 text-2xl font-sans text-white" id="skills">
       <div className="text-center">
         <div className="font-semibold mb-4 text-3xl">
           Skills
         </div>
         {
-          <div className="grid gap-6 grid-cols-4 grid-rows-3">{
+          <div className="grid gap-6 md:grid-cols-4 md:grid-rows-3 grid-cols-2 grid-rows-4">{
 
             mySkills.map((skills,key)=>{
               return(

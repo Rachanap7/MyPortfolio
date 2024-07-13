@@ -1,10 +1,12 @@
 import { useState } from "react";
+import useWindowSize from "./useWindowSize";
 
 const Experience = () => {
   const countExperience = 2;
   const [expArr, setExpArr] = useState(
     Array(Number(countExperience)).fill(false)
   );
+  const { width } = useWindowSize();
   const myExperience = [
     {
       designation: "Senior Front-end Developer",
@@ -28,7 +30,7 @@ const Experience = () => {
   };
   return (
     <div
-      className="max-w-full m-8 ml-20 text-xl font-sans text-white"
+      className="max-w-full m-8 md:ml-20 text-xl font-sans text-white"
       id="experience"
     >
       <div className="text-center font-semibold text-white mb-10 text-3xl">
@@ -39,22 +41,24 @@ const Experience = () => {
           return (
             <div
               className={`flex flex-col w-full shadow-custom rounded-md mb-3 cursor-pointer h-fit ${
-                expArr[key] ? "backdrop-blur-sm bg-regal-blue" : "border-2 border-solid border-white skills-icon-hover1"
+                expArr[key]
+                  ? "backdrop-blur-sm bg-regal-blue"
+                  : "border-2 border-solid border-white skills-icon-hover1"
               }`}
               key={key}
               onClick={() => handleExp(key)}
             >
               <div
-                className={`flex justify-between ${
+                className={`flex justify-between flex-col md:flex-row ${
                   expArr[key] ? "mb-4 mt-4 p-8 pb-0 pt-0" : "p-8 "
                 }`}
               >
-                <div className="flex gap-4">
+                <div className="flex gap-4 flex-col md:flex-row">
                   <div className="exp-role">{exp.designation}</div>
-                  <div className="exp-details">|</div>
+                  {width >= 768 && <div className="exp-details">|</div>}
                   <div className="exp-details">{exp.org}</div>
                 </div>
-                <div className="exp-details justify-self-end">
+                <div className="exp-details md:justify-self-end">
                   {exp.duration}
                 </div>
               </div>

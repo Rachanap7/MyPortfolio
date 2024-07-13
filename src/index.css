@@ -6,7 +6,7 @@ body {
   @apply bg-gradient-to-r from-regal-blue-1 from-60% to-regal-blue;
 }
 .myName{
-    @apply text-white text-5xl font-mono mb-4;
+    @apply text-white md:text-5xl text-ResponsiveName font-mono mb-4;
 }
 .menuHover{
     @apply hover:text-skin-tone;

@@ -25,6 +25,7 @@ module.exports = {
       inset:{
         '37%':'37%',
         '13.7rem':'13.7rem',
+        '10.5rem':'10.5rem',
       },
       boxShadow:{
         'custom':"rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px",
@@ -41,6 +42,9 @@ module.exports = {
       transitionDuration: {
         '1000': '1000ms',
       },
+      fontSize: {
+        'ResponsiveName': '1.8rem',
+      }
     },
   },
   plugins: [],

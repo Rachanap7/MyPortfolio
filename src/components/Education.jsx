@@ -20,7 +20,7 @@ const Education = () => {
     },
   ];
   return (
-    <div className="max-w-full m-8 ml-20 font-sans text-white">
+    <div className="max-w-full m-8 md:ml-20 font-sans text-white">
   <div className="text-center font-semibold text-white mb-4 text-3xl">
     Education
   </div>
@@ -30,21 +30,21 @@ const Education = () => {
       const isLeft = key % 2 === 0;
       return (
         <div key={key} className="flex w-full mb-8 items-center">
-          <div className={`flex ${isLeft ? 'justify-end w-1/2  px-4' : 'justify-end w-8/12'} relative`}>
+          <div className={`flex ${isLeft ? 'justify-end w-1/2  px-4' : 'justify-end md:w-8/12 w-full'} relative`}>
             {isLeft && (
               <div className="flex flex-col items-center absolute right-0 transform translate-x-1/2">
                 <div className="bg-white rounded-full h-4 w-4 border-2 border-gray-200"></div>
                 <div className="border-l-2 border-gray-200 flex-1"></div>
               </div>
             )}
-            <div className={`skills-icon-hover border-2 border-solid border-white p-4 rounded-lg shadow-md ${isLeft ? 'text-right' : 'text-left'}`}>
+            <div className={`skills-icon-hover border-2 border-solid border-white p-4 rounded-lg shadow-md md:max-w-96 max-w-40 ${isLeft ? 'text-right' : 'text-left'}`}>
               <div className="font-bold">{entry.edu}</div>
               <div>{entry.institute}</div>
               <div>{entry.percentage}</div>
               <div>{entry.YOP}</div>
             </div>
             {!isLeft && (
-              <div className="flex flex-col items-center absolute right-[13.7rem] transform -translate-x-1/2">
+              <div className="flex flex-col items-center absolute md:right-[13.7rem] right-[10.5rem] transform -translate-x-1/2">
                 <div className="bg-white rounded-full h-4 w-4 border-2 border-gray-200"></div>
                 <div className="border-l-2 border-gray-200 flex-1"></div>
               </div>

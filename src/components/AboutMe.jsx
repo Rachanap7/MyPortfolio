@@ -3,7 +3,7 @@ import { useState } from "react";
 const AboutMe = () => {
   const [openMe, setOpenME] = useState(false);
   return (
-    <div className="m-8 ml-20 overflow-hidden">
+    <div className="m-8 md:ml-20 overflow-hidden">
       <div 
       onClick={() => setOpenME(!openMe)} className={`max-w-full max-h-full p-4 text-2xl font-sans text-white bold cursor-pointer rounded-xl shadow-custom ${openMe ? "backdrop-blur-sm bg-regal-blue" : "border-2 border-solid border-white skills-icon-hover"}`}>
       {
@@ -16,7 +16,7 @@ const AboutMe = () => {
         )
       }
         {openMe && (
-          <div className="flex justify-evenly gap-28">
+          <div className="flex justify-evenly md:gap-28 flex-wrap">
             <img
               src={"/NavPhoto.jpg"}
               alt="NavPhoto"

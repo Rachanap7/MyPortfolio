@@ -10,7 +10,7 @@ import {
 const Footer = () => {
   return (
     <div className="max-w-full text-white text-center bg-regal-blue-2 flex flex-col gap-8 min-h-60 items-center">
-      <div className="w-1/4 h-16 bottom-2 flex justify-evenly pt-1 mt-2">
+      <div className="md:w-1/4 w-1/2 h-16 bottom-2 flex justify-evenly pt-1 mt-2">
         <div className="icons skills-icon-hover brand-icon p-1.5">
           <a
             href="https://github.com/Rachanap7"

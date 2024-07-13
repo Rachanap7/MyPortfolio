@@ -38,7 +38,7 @@ const MyProjects = () => {
     },
   ];
   return (
-    <div className="max-w-full m-8 ml-20 font-sans text-gray-500" id="projects">
+    <div className="max-w-full m-8 md:ml-20 font-sans text-gray-500" id="projects">
       <div className="text-center font-semibold text-white mb-6 text-3xl">
         Projects
       </div>

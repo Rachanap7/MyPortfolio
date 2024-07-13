@@ -22,10 +22,10 @@ export default function App() {
   return (
     <main>
       <div
-        className="m-8 ml-20 flex justify-start gap-8 items-center h-full"
+        className="m-8 md:ml-20 flex justify-start gap-8 md:items-center h-full md:flex-row flex-col"
         id="home"
       >
-        <div className="flex flex-col">
+        <div className="flex flex-col md:items-start items-center">
           <span className="text-2xl text-regal-blue-4">Hello, I am</span>
           <span className="myName">Rachana Ramakant Parkar</span>
           <div className="flex gap-4">
@@ -34,7 +34,7 @@ export default function App() {
             <span className="skills-icon cursor-pointer skills-icon-hover"><SiJavascript/></span>
           </div>
         </div>
-        <div className="ml-auto">
+        <div className="md:ml-auto">
           <ul className="text-white font-medium flex gap-2">
             <li className="p-2 rounded text-center flex-auto navBtn skills-icon-hover">
               <a  href="#contact" className="">
